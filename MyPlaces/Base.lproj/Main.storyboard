@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SGT-i0-Kf0">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Заведения Ярославля-->
+        <scene sceneID="vJl-Ze-nzg">
+            <objects>
+                <tableViewController id="gh6-Q9-FY4" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Vk-FU-hux">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yZi-oJ-HYj" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yZi-oJ-HYj" id="KsJ-mg-yYR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ac9-8L-pjT">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="P3q-sW-7Vt"/>
+                                                <constraint firstAttribute="width" constant="65" id="e49-zj-9NZ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL1-ki-1uN">
+                                            <rect key="frame" x="95" y="9" width="303" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="82X-h6-j11"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8c-FL-e37">
+                                            <rect key="frame" x="95" y="35" width="315" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="eng-E9-jIm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7s-bI-cpL">
+                                            <rect key="frame" x="95" y="54" width="303" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="DS8-41-tFy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ac9-8L-pjT" firstAttribute="centerY" secondItem="KsJ-mg-yYR" secondAttribute="centerY" id="93w-ew-IDQ"/>
+                                        <constraint firstItem="ac9-8L-pjT" firstAttribute="top" secondItem="KsJ-mg-yYR" secondAttribute="top" constant="10" id="Auu-5L-0Mp"/>
+                                        <constraint firstItem="yL1-ki-1uN" firstAttribute="leading" secondItem="ac9-8L-pjT" secondAttribute="trailing" constant="15" id="EfL-6D-fo9"/>
+                                        <constraint firstItem="p7s-bI-cpL" firstAttribute="leading" secondItem="ac9-8L-pjT" secondAttribute="trailing" constant="15" id="LrN-LE-6mh"/>
+                                        <constraint firstItem="p7s-bI-cpL" firstAttribute="top" secondItem="F8c-FL-e37" secondAttribute="bottom" constant="1" id="OQP-ef-2PI"/>
+                                        <constraint firstItem="F8c-FL-e37" firstAttribute="trailing" secondItem="KsJ-mg-yYR" secondAttribute="trailingMargin" constant="16" id="U1j-Z8-fFD"/>
+                                        <constraint firstItem="F8c-FL-e37" firstAttribute="leading" secondItem="ac9-8L-pjT" secondAttribute="trailing" constant="15" id="b1e-d1-7TR"/>
+                                        <constraint firstItem="ac9-8L-pjT" firstAttribute="leading" secondItem="KsJ-mg-yYR" secondAttribute="leading" constant="15" id="ild-7X-z0s"/>
+                                        <constraint firstItem="F8c-FL-e37" firstAttribute="top" secondItem="yL1-ki-1uN" secondAttribute="bottom" constant="5" id="m2w-SY-y5I"/>
+                                        <constraint firstAttribute="trailing" secondItem="p7s-bI-cpL" secondAttribute="trailing" constant="16" id="qY8-nY-HpK"/>
+                                        <constraint firstItem="yL1-ki-1uN" firstAttribute="top" secondItem="KsJ-mg-yYR" secondAttribute="top" constant="9" id="uyh-sx-erW"/>
+                                        <constraint firstAttribute="bottom" secondItem="p7s-bI-cpL" secondAttribute="bottom" constant="9.5" id="yY0-T9-S4j"/>
+                                        <constraint firstAttribute="trailing" secondItem="yL1-ki-1uN" secondAttribute="trailing" constant="16" id="zaX-Ri-CXt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="ac9-8L-pjT" id="8fd-ma-5z0"/>
+                                    <outlet property="locationLabel" destination="F8c-FL-e37" id="x56-W3-3Hn"/>
+                                    <outlet property="nameLabel" destination="yL1-ki-1uN" id="z0P-2P-mkD"/>
+                                    <outlet property="typeLabel" destination="p7s-bI-cpL" id="cjM-zV-blk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gh6-Q9-FY4" id="1uj-3P-HVE"/>
+                            <outlet property="delegate" destination="gh6-Q9-FY4" id="vqy-Ys-6IJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Заведения Ярославля" id="jcv-de-iAE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaF-wP-ZIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="520.79999999999995" y="-61.619190404797607"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kyc-Sf-CbL">
+            <objects>
+                <navigationController id="SGT-i0-Kf0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZQi-Hv-Z0x">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="19"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gh6-Q9-FY4" kind="relationship" relationship="rootViewController" id="G8b-zP-Mos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xy6-Gg-f50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="-61"/>
+        </scene>
+    </scenes>
+</document>
