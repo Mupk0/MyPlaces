@@ -7,16 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0B36ED22D4DD2800A7EF3B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B36EB22D4DD2500A7EF3B /* RealmSwift.framework */; };
+		EF0B36EE22D4DD2800A7EF3B /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B36EB22D4DD2500A7EF3B /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF0B36EF22D4DD2800A7EF3B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B36EC22D4DD2800A7EF3B /* Realm.framework */; };
+		EF0B36F022D4DD2800A7EF3B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B36EC22D4DD2800A7EF3B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1ED4CF22D34776001B4AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1ED4CE22D34776001B4AF0 /* AppDelegate.swift */; };
 		EF1ED4D422D34776001B4AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1ED4D222D34776001B4AF0 /* Main.storyboard */; };
 		EF1ED4D622D34778001B4AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1ED4D522D34778001B4AF0 /* Assets.xcassets */; };
 		EF1ED4D922D34778001B4AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1ED4D722D34778001B4AF0 /* LaunchScreen.storyboard */; };
 		EF2C26C722D37D4200F10B84 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C26C622D37D4200F10B84 /* PlaceModel.swift */; };
 		EFE5035622D375AA008D7924 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5035522D375AA008D7924 /* CustomTableViewCell.swift */; };
+		EFE8B49C22D48CB40045AB76 /* NewPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE8B49B22D48CB40045AB76 /* NewPlaceController.swift */; };
 		EFF2D34322D34FB40050CE76 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2D34222D34FB40050CE76 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EF0B36F122D4DD2800A7EF3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF0B36F022D4DD2800A7EF3B /* Realm.framework in Embed Frameworks */,
+				EF0B36EE22D4DD2800A7EF3B /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EF0B36EB22D4DD2500A7EF3B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		EF0B36EC22D4DD2800A7EF3B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		EF1ED4CB22D34776001B4AF0 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1ED4CE22D34776001B4AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1ED4D322D34776001B4AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -25,6 +47,7 @@
 		EF1ED4DA22D34778001B4AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF2C26C622D37D4200F10B84 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		EFE5035522D375AA008D7924 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		EFE8B49B22D48CB40045AB76 /* NewPlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceController.swift; sourceTree = "<group>"; };
 		EFF2D34222D34FB40050CE76 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0B36EF22D4DD2800A7EF3B /* Realm.framework in Frameworks */,
+				EF0B36ED22D4DD2800A7EF3B /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +67,8 @@
 		EF1ED4C222D34776001B4AF0 = {
 			isa = PBXGroup;
 			children = (
+				EF0B36EC22D4DD2800A7EF3B /* Realm.framework */,
+				EF0B36EB22D4DD2500A7EF3B /* RealmSwift.framework */,
 				EF1ED4CD22D34776001B4AF0 /* MyPlaces */,
 				EF1ED4CC22D34776001B4AF0 /* Products */,
 			);
@@ -60,6 +87,7 @@
 			children = (
 				EF1ED4CE22D34776001B4AF0 /* AppDelegate.swift */,
 				EFF2D34222D34FB40050CE76 /* MainViewController.swift */,
+				EFE8B49B22D48CB40045AB76 /* NewPlaceController.swift */,
 				EF2C26C622D37D4200F10B84 /* PlaceModel.swift */,
 				EFE5035522D375AA008D7924 /* CustomTableViewCell.swift */,
 				EF1ED4D222D34776001B4AF0 /* Main.storyboard */,
@@ -80,6 +108,8 @@
 				EF1ED4C722D34776001B4AF0 /* Sources */,
 				EF1ED4C822D34776001B4AF0 /* Frameworks */,
 				EF1ED4C922D34776001B4AF0 /* Resources */,
+				EF0B36F122D4DD2800A7EF3B /* Embed Frameworks */,
+				EF0B36F222D4E09F00A7EF3B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,6 +166,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EF0B36F222D4E09F00A7EF3B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF1ED4C722D34776001B4AF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,6 +195,7 @@
 				EF2C26C722D37D4200F10B84 /* PlaceModel.swift in Sources */,
 				EF1ED4CF22D34776001B4AF0 /* AppDelegate.swift in Sources */,
 				EFF2D34322D34FB40050CE76 /* MainViewController.swift in Sources */,
+				EFE8B49C22D48CB40045AB76 /* NewPlaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +341,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6939WNYZGH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.MyPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,16 +366,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6939WNYZGH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = no.MyPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

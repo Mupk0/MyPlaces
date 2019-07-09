@@ -6,28 +6,29 @@
 //  Copyright © 2019 Dmitry Kulagin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     
     var name: String
-    var location: String
-    var type: String
-    var image: String
+    var location: String?
+    var type: String?
+    var image: UIImage?
+    var placeImage: String?
     
-        let placeNames = [
+    static let placeNames = [
             "Сuba Libre", "Papin Garage",
             "Maneki", "Брюгге", "Мамука",
             "Хмель & Гриль", "Багет Паштет",
             "Ванильное небо", "ХЛЕБ"
         ]
     
-    func getPlaces() -> [Place] {
+    static func getPlaces() -> [Place] {
         
         var places = [Place]()
         
         for place in placeNames {
-            places.append(Place(name: place, location: "Yaroslavl", type: "Cafe", image: place))
+            places.append(Place(name: place, location: "Yaroslavl", type: "Cafe", image: nil, placeImage: place))
         }
         
         return places
