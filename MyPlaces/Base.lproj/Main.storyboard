@@ -150,6 +150,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="MmD-te-EOw">
+                                        <rect key="frame" x="0.0" y="475" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MmD-te-EOw" id="9Xy-2W-gW7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-f4-MRF" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Sa-f4-MRF" firstAttribute="centerY" secondItem="9Xy-2W-gW7" secondAttribute="centerY" id="EOr-Sz-SOS"/>
+                                                <constraint firstItem="6Sa-f4-MRF" firstAttribute="centerX" secondItem="9Xy-2W-gW7" secondAttribute="centerX" id="exP-qz-EuN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -174,6 +191,7 @@
                         <outlet property="imageOfPlace" destination="LbU-bQ-ClC" id="sRg-lI-m2D"/>
                         <outlet property="locationName" destination="pFN-4d-BhZ" id="ZzT-22-1a2"/>
                         <outlet property="placeName" destination="One-xl-eLO" id="eWC-s1-sue"/>
+                        <outlet property="ratingControl" destination="6Sa-f4-MRF" id="Bdh-mB-bye"/>
                         <outlet property="saveButton" destination="EOc-A8-ZOs" id="pdU-jC-R8l"/>
                         <outlet property="typeName" destination="m5N-Kd-awP" id="uHZ-Vm-CWW"/>
                     </connections>
@@ -181,7 +199,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNM-C2-Mf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="WF2-SL-aa1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-836" y="-62"/>
+            <point key="canvasLocation" x="-836.23188405797111" y="-62.276785714285708"/>
         </scene>
         <!--Заведения Ярославля-->
         <scene sceneID="tBt-gX-ohx">

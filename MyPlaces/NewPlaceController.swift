@@ -10,25 +10,21 @@ import UIKit
 
 class NewPlaceController: UITableViewController {
     
-    var currentPlace: Place?
+    var currentPlace: Place!
     
     var imageIsChanged = false
 
-    
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
     @IBOutlet weak var placeName: UITextField!
-    
     @IBOutlet weak var locationName: UITextField!
-    
     @IBOutlet weak var typeName: UITextField!
-    
     @IBOutlet weak var imageOfPlace: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
@@ -78,7 +74,7 @@ class NewPlaceController: UITableViewController {
 
         let imageData = image?.pngData()
         
-        let newPlace = Place(name: placeName.text!, location: locationName.text, type: typeName.text, imageData: imageData)
+        let newPlace = Place(name: placeName.text!, location: locationName.text, type: typeName.text, imageData: imageData, rating: Double(ratingControl.rating))
         
         if currentPlace != nil {
             try! realm.write {
@@ -86,6 +82,7 @@ class NewPlaceController: UITableViewController {
                 currentPlace?.location = newPlace.type
                 currentPlace?.location = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         } else {
             storageManager.saveObject(newPlace)
@@ -104,6 +101,7 @@ class NewPlaceController: UITableViewController {
             placeName.text = currentPlace?.name
             locationName.text = currentPlace?.location
             typeName.text = currentPlace?.type
+            ratingControl.rating = Int(currentPlace.rating)
         }
     }
     
