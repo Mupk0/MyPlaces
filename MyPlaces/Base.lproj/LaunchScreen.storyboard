@@ -20,10 +20,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="eby-qT-nKV">
                                 <rect key="frame" x="16" y="20" width="343" height="627"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eby-qT-nKV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0GQ-AO-C4O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eby-qT-nKV" secondAttribute="bottom" constant="20" id="0Xz-nV-nuJ"/>
@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen" width="512" height="512"/>
+        <image name="LaunchScreen" width="320" height="320"/>
     </resources>
 </document>
