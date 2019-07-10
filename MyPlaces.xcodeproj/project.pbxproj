@@ -13,6 +13,7 @@
 		EF0B36F022D4DD2800A7EF3B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B36EC22D4DD2800A7EF3B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF0B36F422D4E56D00A7EF3B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B36F322D4E56D00A7EF3B /* StorageManager.swift */; };
 		EF15E56922D60FEA000F0F55 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E56822D60FEA000F0F55 /* RatingControl.swift */; };
+		EF15E56B22D633A6000F0F55 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15E56A22D633A6000F0F55 /* MapViewController.swift */; };
 		EF1ED4CF22D34776001B4AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1ED4CE22D34776001B4AF0 /* AppDelegate.swift */; };
 		EF1ED4D422D34776001B4AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1ED4D222D34776001B4AF0 /* Main.storyboard */; };
 		EF1ED4D622D34778001B4AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1ED4D522D34778001B4AF0 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		EF0B36EC22D4DD2800A7EF3B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		EF0B36F322D4E56D00A7EF3B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		EF15E56822D60FEA000F0F55 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		EF15E56A22D633A6000F0F55 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EF1ED4CB22D34776001B4AF0 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1ED4CE22D34776001B4AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF1ED4D322D34776001B4AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				EF2C26C622D37D4200F10B84 /* PlaceModel.swift */,
 				EF0B36F322D4E56D00A7EF3B /* StorageManager.swift */,
 				EFE5035522D375AA008D7924 /* CustomTableViewCell.swift */,
+				EF15E56A22D633A6000F0F55 /* MapViewController.swift */,
 				EF15E56822D60FEA000F0F55 /* RatingControl.swift */,
 				EF1ED4D222D34776001B4AF0 /* Main.storyboard */,
 				EF1ED4D522D34778001B4AF0 /* Assets.xcassets */,
@@ -204,6 +207,7 @@
 				EF0B36F422D4E56D00A7EF3B /* StorageManager.swift in Sources */,
 				EFF2D34322D34FB40050CE76 /* MainViewController.swift in Sources */,
 				EFE8B49C22D48CB40045AB76 /* NewPlaceController.swift in Sources */,
+				EF15E56B22D633A6000F0F55 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
