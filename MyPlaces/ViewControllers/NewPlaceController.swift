@@ -18,6 +18,7 @@ class NewPlaceController: UITableViewController {
     @IBOutlet weak var locationName: UITextField!
     @IBOutlet weak var typeName: UITextField!
     @IBOutlet weak var imageOfPlace: UIImageView!
+    @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
@@ -83,14 +84,15 @@ class NewPlaceController: UITableViewController {
         
         let imageData = image?.pngData()
         
-        let newPlace = Place(name: placeName.text!, location: locationName.text, type: typeName.text, imageData: imageData, rating: Double(ratingControl.rating))
+        let newPlace = Place(name: placeName.text!, location: locationName.text, type: typeName.text, imageData: imageData, details: descriptionField.text, rating: Double(ratingControl.rating))
         
         if currentPlace != nil {
             try! realm.write {
                 currentPlace?.name = newPlace.name
-                currentPlace?.location = newPlace.type
-                currentPlace?.location = newPlace.type
+                currentPlace?.location = newPlace.location
+                currentPlace.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.details = newPlace.details
                 currentPlace?.rating = newPlace.rating
             }
         } else {
@@ -110,6 +112,7 @@ class NewPlaceController: UITableViewController {
             placeName.text = currentPlace?.name
             locationName.text = currentPlace?.location
             typeName.text = currentPlace?.type
+            descriptionField.text = currentPlace?.details
             ratingControl.rating = Int(currentPlace.rating)
         }
     }
@@ -127,14 +130,24 @@ class NewPlaceController: UITableViewController {
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
-    
 }
 
 // MARK: Text field delegate
 extension NewPlaceController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField == placeName {
+            textField.resignFirstResponder()
+            locationName.becomeFirstResponder()
+        } else if textField == locationName {
+            textField.resignFirstResponder()
+            typeName.becomeFirstResponder()
+        } else if textField == typeName {
+            textField.resignFirstResponder()
+            descriptionField.becomeFirstResponder()
+        } else if textField == descriptionField {
+            textField.resignFirstResponder()
+        }
         return true
     }
     

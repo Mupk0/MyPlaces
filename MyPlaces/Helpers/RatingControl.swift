@@ -95,6 +95,7 @@ import UIKit
             
             // Add new button on the rating button array
             ratingButtons.append(button)
+            
         }
         
         updateButtonSelectedState()
@@ -105,5 +106,4 @@ import UIKit
             button.isSelected = index < rating
         }
     }
-    
 }

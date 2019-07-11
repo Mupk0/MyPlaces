@@ -66,9 +66,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.nameLabel?.text = place.name
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
-        cell.imageOfPlace.image = UIImage(data: place.imageData!)
+        
+        cell.ratingLabel.isUserInteractionEnabled = false
         cell.ratingLabel.rating = Int(place.rating)
         
+        cell.imageOfPlace.image = UIImage(data: place.imageData!)
         cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
         cell.imageOfPlace?.clipsToBounds = true
         
@@ -87,7 +89,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             storageManager.deleteObject(place)
             tableView.deleteRows(at: [indexPath], with: .automatic )
         }
-        
         return [deleteAction]
     }
     
@@ -103,6 +104,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             let newPlaceVC = segue.destination as! NewPlaceController
             newPlaceVC.currentPlace = place
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
