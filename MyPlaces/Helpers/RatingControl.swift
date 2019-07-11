@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable class RatingControl: UIStackView {
     
     // MARK: Properties
-    
     var rating = 0 {
         didSet {
             updateButtonSelectedState()
@@ -25,12 +24,13 @@ import UIKit
             setupButtons()
         }
     }
+    
     @IBInspectable var starCount: Int = 5 {
         didSet {
             setupButtons()
         }
     }
-
+    
     // MARK: Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -96,7 +96,7 @@ import UIKit
             // Add new button on the rating button array
             ratingButtons.append(button)
         }
-
+        
         updateButtonSelectedState()
     }
     
@@ -105,5 +105,5 @@ import UIKit
             button.isSelected = index < rating
         }
     }
-
+    
 }

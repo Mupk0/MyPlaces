@@ -36,7 +36,7 @@
                                                     <rect key="frame" x="344" y="189" width="50" height="50"/>
                                                     <state key="normal" image="map"/>
                                                     <connections>
-                                                        <segue destination="B37-Ts-ed3" kind="presentation" identifier="showMap" id="O7M-yi-YcQ"/>
+                                                        <segue destination="B37-Ts-ed3" kind="presentation" identifier="showPlace" id="O7M-yi-YcQ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -61,16 +61,16 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7KO-yW-862">
                                                     <rect key="frame" x="16" y="8" width="382" height="58.666666666666657"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETe-ya-TmD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="24.333333333333332"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETe-ya-TmD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="24.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Place name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="One-xl-eLO">
-                                                            <rect key="frame" x="0.0" y="32.333333333333336" width="382" height="26.333333333333336"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="One-xl-eLO">
+                                                            <rect key="frame" x="0.0" y="32.666666666666664" width="382" height="26"/>
                                                             <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="aa5-Zk-4f7" id="kw1-aV-YmD"/>
@@ -95,18 +95,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-Ih-fEz">
-                                                    <rect key="frame" x="16" y="8" width="382" height="58.666666666666657"/>
+                                                    <rect key="frame" x="16" y="7.9999999999999964" width="348" height="58.666666666666657"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRF-Xf-GUz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="24.333333333333332"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRF-Xf-GUz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="348" height="24.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Location name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFN-4d-BhZ">
-                                                            <rect key="frame" x="0.0" y="32.333333333333336" width="382" height="26.333333333333336"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите адрес" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFN-4d-BhZ">
+                                                            <rect key="frame" x="0.0" y="32.666666666666664" width="348" height="26"/>
                                                             <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="aa5-Zk-4f7" id="Kuq-CF-G9M"/>
@@ -114,11 +114,24 @@
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-yg-MJG">
+                                                    <rect key="frame" x="372" y="42.666666666666664" width="22" height="21.999999999999993"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="3RA-SZ-jMM"/>
+                                                        <constraint firstAttribute="height" constant="22" id="yBC-ZK-gZg"/>
+                                                    </constraints>
+                                                    <state key="normal" image="placeholder"/>
+                                                    <connections>
+                                                        <segue destination="B37-Ts-ed3" kind="presentation" identifier="getAddress" id="9yH-yE-Blx"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="dkI-Ih-fEz" secondAttribute="bottom" constant="8" id="3Xw-QX-cNU"/>
+                                                <constraint firstItem="zX3-yg-MJG" firstAttribute="leading" secondItem="dkI-Ih-fEz" secondAttribute="trailing" constant="8" id="6vA-TB-T5q"/>
                                                 <constraint firstItem="dkI-Ih-fEz" firstAttribute="top" secondItem="Pcz-1D-QP2" secondAttribute="top" constant="8" id="De7-A7-s4I"/>
-                                                <constraint firstAttribute="trailing" secondItem="dkI-Ih-fEz" secondAttribute="trailing" constant="16" id="Twm-Qq-QtP"/>
+                                                <constraint firstItem="zX3-yg-MJG" firstAttribute="centerY" secondItem="pFN-4d-BhZ" secondAttribute="centerY" id="Utm-1x-ZiP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zX3-yg-MJG" secondAttribute="trailing" id="lCo-Lc-9wh"/>
                                                 <constraint firstItem="dkI-Ih-fEz" firstAttribute="leading" secondItem="Pcz-1D-QP2" secondAttribute="leading" constant="16" id="rLg-wo-V53"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -131,18 +144,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-lH-mzs">
-                                                    <rect key="frame" x="16" y="8" width="382" height="58.666666666666657"/>
+                                                    <rect key="frame" x="16.000000000000007" y="7.9999999999999964" width="105.66666666666669" height="58.666666666666657"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-ld-oEZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="24.333333333333332"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-ld-oEZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="24.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Type name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-Kd-awP">
-                                                            <rect key="frame" x="0.0" y="32.333333333333336" width="382" height="26.333333333333336"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите тип" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-Kd-awP">
+                                                            <rect key="frame" x="0.0" y="32.666666666666664" width="105.66666666666667" height="26"/>
                                                             <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="aa5-Zk-4f7" id="KcM-5V-O8H"/>
@@ -154,7 +167,6 @@
                                             <constraints>
                                                 <constraint firstItem="h0C-lH-mzs" firstAttribute="top" secondItem="G7w-cD-leK" secondAttribute="top" constant="8" id="di1-Zl-Tc1"/>
                                                 <constraint firstItem="h0C-lH-mzs" firstAttribute="leading" secondItem="G7w-cD-leK" secondAttribute="leading" constant="16" id="elK-dF-3x8"/>
-                                                <constraint firstAttribute="trailing" secondItem="h0C-lH-mzs" secondAttribute="trailing" constant="16" id="jxx-VD-fBs"/>
                                                 <constraint firstAttribute="bottom" secondItem="h0C-lH-mzs" secondAttribute="bottom" constant="8" id="lOp-hW-KVd"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -185,12 +197,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Новое место" id="VzL-Il-2Gs">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UCg-kI-JhR">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="UCg-kI-JhR">
                             <connections>
                                 <action selector="cancelAction:" destination="aa5-Zk-4f7" id="fiJ-og-9p1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EOc-A8-ZOs">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="EOc-A8-ZOs">
                             <connections>
                                 <segue destination="WF2-SL-aa1" kind="unwind" unwindAction="unwindSegue:" id="JaE-Kc-1Am"/>
                             </connections>
@@ -227,9 +239,43 @@
                                     <constraint firstAttribute="width" constant="30" id="Kbc-gd-Xw5"/>
                                     <constraint firstAttribute="height" constant="30" id="WaO-2I-jeO"/>
                                 </constraints>
-                                <state key="normal" image="camcel"/>
+                                <state key="normal" image="cancel"/>
                                 <connections>
                                     <action selector="closeVC" destination="B37-Ts-ed3" eventType="touchUpInside" id="H0h-tH-IJS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="zly-FK-hrz">
+                                <rect key="frame" x="187" y="408" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ekt-Tk-DBR"/>
+                                    <constraint firstAttribute="height" constant="40" id="m44-lQ-nae"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущий адрес" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-YV-9tu">
+                                <rect key="frame" x="20" y="173" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-Ef-2xn">
+                                <rect key="frame" x="161" y="774" width="92" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Готово">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="B37-Ts-ed3" eventType="touchUpInside" id="ucd-Ay-0Q9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFu-a1-Nvv">
+                                <rect key="frame" x="344" y="780" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="htw-NM-KIv"/>
+                                    <constraint firstAttribute="height" constant="30" id="tkx-tE-oul"/>
+                                </constraints>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="B37-Ts-ed3" eventType="touchUpInside" id="vwu-tJ-hTn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -237,14 +283,26 @@
                         <constraints>
                             <constraint firstItem="IeO-Um-ogn" firstAttribute="trailing" secondItem="AiH-GT-6vO" secondAttribute="trailing" id="4an-pH-Deh"/>
                             <constraint firstAttribute="bottom" secondItem="IeO-Um-ogn" secondAttribute="bottom" id="ANs-Lp-YYp"/>
+                            <constraint firstItem="AiH-GT-6vO" firstAttribute="trailing" secondItem="MFu-a1-Nvv" secondAttribute="trailing" constant="40" id="CpG-fS-bNz"/>
+                            <constraint firstItem="AiH-GT-6vO" firstAttribute="trailing" secondItem="QoQ-YV-9tu" secondAttribute="trailing" constant="20" id="MYQ-Uv-8iM"/>
+                            <constraint firstItem="NhI-Ef-2xn" firstAttribute="centerX" secondItem="IeO-Um-ogn" secondAttribute="centerX" id="P9k-11-s43"/>
                             <constraint firstItem="AiH-GT-6vO" firstAttribute="trailing" secondItem="wid-C5-kog" secondAttribute="trailing" constant="40" id="PkW-6K-kM1"/>
                             <constraint firstItem="wid-C5-kog" firstAttribute="top" secondItem="AiH-GT-6vO" secondAttribute="top" constant="40" id="XiK-gb-BQI"/>
+                            <constraint firstItem="IeO-Um-ogn" firstAttribute="top" secondItem="QoQ-YV-9tu" secondAttribute="bottom" constant="-209" id="bSj-S3-cpy"/>
+                            <constraint firstItem="zly-FK-hrz" firstAttribute="centerY" secondItem="Yap-CP-8An" secondAttribute="centerY" constant="-20" id="guR-rl-9Si"/>
+                            <constraint firstItem="zly-FK-hrz" firstAttribute="centerX" secondItem="Yap-CP-8An" secondAttribute="centerX" id="hGY-t7-mog"/>
+                            <constraint firstItem="QoQ-YV-9tu" firstAttribute="leading" secondItem="AiH-GT-6vO" secondAttribute="leading" constant="20" id="hck-mK-vPH"/>
+                            <constraint firstItem="AiH-GT-6vO" firstAttribute="bottom" secondItem="MFu-a1-Nvv" secondAttribute="bottom" constant="52" id="jYo-p9-yJl"/>
                             <constraint firstItem="IeO-Um-ogn" firstAttribute="top" secondItem="Yap-CP-8An" secondAttribute="top" id="vUB-EQ-fi5"/>
+                            <constraint firstItem="AiH-GT-6vO" firstAttribute="bottom" secondItem="NhI-Ef-2xn" secondAttribute="bottom" constant="40" id="vfE-CU-krU"/>
                             <constraint firstItem="IeO-Um-ogn" firstAttribute="leading" secondItem="AiH-GT-6vO" secondAttribute="leading" id="y9u-A6-ALQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AiH-GT-6vO"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="QoQ-YV-9tu" id="989-vC-EN7"/>
+                        <outlet property="doneButton" destination="NhI-Ef-2xn" id="jLF-Rb-sp0"/>
+                        <outlet property="mapPinImage" destination="zly-FK-hrz" id="vrR-yB-C4q"/>
                         <outlet property="mapView" destination="IeO-Um-ogn" id="32I-Yj-cMm"/>
                     </connections>
                 </viewController>
@@ -252,10 +310,10 @@
             </objects>
             <point key="canvasLocation" x="-94.20289855072464" y="-62.276785714285708"/>
         </scene>
-        <!--Заведения Ярославля-->
+        <!--Мои места-->
         <scene sceneID="tBt-gX-ohx">
             <objects>
-                <viewController id="few-fl-03N" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="few-fl-03N" userLabel="Мои места" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9B3-75-S4y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,21 +340,21 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-9U-wic">
                                                     <rect key="frame" x="96" y="8" width="204" height="68.666666666666671"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bl4-9d-PHE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="22.333333333333332"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bl4-9d-PHE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="22.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-Oh-3M8">
-                                                            <rect key="frame" x="0.0" y="25.333333333333336" width="204" height="19.666666666666664"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-Oh-3M8">
+                                                            <rect key="frame" x="0.0" y="25.666666666666664" width="204" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRn-D8-oIl">
-                                                            <rect key="frame" x="0.0" y="48" width="204" height="20.666666666666671"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRn-D8-oIl">
+                                                            <rect key="frame" x="0.0" y="48.666666666666664" width="204" height="19.999999999999993"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -340,8 +398,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oJT-Ul-U3F">
                                 <rect key="frame" x="0.0" y="88" width="414" height="29"/>
                                 <segments>
-                                    <segment title="Date"/>
-                                    <segment title="Name"/>
+                                    <segment title="По дате"/>
+                                    <segment title="По названию"/>
                                 </segments>
                                 <connections>
                                     <action selector="sortSelection:" destination="few-fl-03N" eventType="valueChanged" id="rUA-am-RFT"/>
@@ -360,7 +418,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ztS-LZ-hyo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Заведения Ярославля" id="7m2-0O-1tr">
+                    <navigationItem key="navigationItem" title="Список " id="7m2-0O-1tr">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="1mV-3n-uaY">
                             <connections>
                                 <action selector="reverseSorting:" destination="few-fl-03N" id="Zq7-q2-ALI"/>
@@ -426,10 +484,14 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="194" height="195"/>
-        <image name="camcel" width="128" height="128"/>
+        <image name="cancel" width="128" height="128"/>
+        <image name="location" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
+        <image name="pin" width="40" height="40"/>
+        <image name="placeholder" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9yH-yE-Blx"/>
         <segue reference="LUl-dt-SV8"/>
     </inferredMetricsTieBreakers>
 </document>

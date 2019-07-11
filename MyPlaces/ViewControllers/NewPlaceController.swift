@@ -7,13 +7,12 @@
 //
 
 import UIKit
-
+ 
 class NewPlaceController: UITableViewController {
     
     var currentPlace: Place!
-    
     var imageIsChanged = false
-
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeName: UITextField!
     @IBOutlet weak var locationName: UITextField!
@@ -64,23 +63,24 @@ class NewPlaceController: UITableViewController {
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != "showMap" {
-            return
+        
+        guard let identifier = segue.identifier, let mapVC = segue.destination as? MapViewController else { return }
+        
+        mapVC.incomeSegueIdentifier = identifier
+        mapVC.mapViewControllerDelegate = self
+        
+        if identifier == "showPlace" {
+            mapVC.place.name = placeName.text!
+            mapVC.place.location = locationName.text
+            mapVC.place.type = typeName.text
+            mapVC.place.imageData = imageOfPlace.image?.pngData()
         }
-        let mapVC = segue.destination as! MapViewController
-        mapVC.place = currentPlace
     }
     
     func savePlace() {
         
-        var image: UIImage?
+        let image = imageIsChanged ? imageOfPlace.image : #imageLiteral(resourceName: "imagePlaceholder")
         
-        if imageIsChanged {
-            image = imageOfPlace.image
-        } else {
-            image = #imageLiteral(resourceName: "imagePlaceholder")
-        }
-
         let imageData = image?.pngData()
         
         let newPlace = Place(name: placeName.text!, location: locationName.text, type: typeName.text, imageData: imageData, rating: Double(ratingControl.rating))
@@ -132,7 +132,7 @@ class NewPlaceController: UITableViewController {
 
 // MARK: Text field delegate
 extension NewPlaceController: UITextFieldDelegate {
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -169,5 +169,11 @@ extension NewPlaceController: UIImagePickerControllerDelegate, UINavigationContr
         imageIsChanged = true
         
         dismiss(animated: true)
+    }
+}
+
+extension NewPlaceController: MapViewControllerDelegate {
+    func getAddress(_ address: String?) {
+        locationName.text = address
     }
 }

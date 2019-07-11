@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
+    
     private let searchController = UISearchController(searchResultsController: nil)
     private var places: Results<Place>!
     private var filtredPlaces: Results<Place>!
@@ -26,10 +26,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var reverseSortingButton: UIBarButtonItem!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         places = realm.objects(Place.self)
         
         //Setup search controller
@@ -39,20 +39,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
-
+    
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return filtredPlaces.count
         }
         return places.isEmpty ? 0 : places.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
@@ -63,16 +62,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             place = places[indexPath.row]
         }
-
+        
         cell.nameLabel?.text = place.name
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
         cell.ratingLabel.rating = Int(place.rating)
-
+        
         cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
         cell.imageOfPlace?.clipsToBounds = true
-
+        
         return cell
     }
     
@@ -91,7 +90,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return [deleteAction]
     }
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
@@ -114,7 +113,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         newPlaceVC.savePlace()
         tableView.reloadData()
     }
-
+    
     @IBAction func sortSelection(_ sender: UISegmentedControl) {
         
         sorting()
