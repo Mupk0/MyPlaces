@@ -18,7 +18,8 @@ class NewPlaceController: UITableViewController {
     @IBOutlet weak var locationName: UITextField!
     @IBOutlet weak var typeName: UITextField!
     @IBOutlet weak var imageOfPlace: UIImageView!
-    @IBOutlet weak var descriptionField: UITextField!
+    @IBOutlet weak var descriptionField: UITextView!
+    
     @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
@@ -145,8 +146,6 @@ extension NewPlaceController: UITextFieldDelegate {
         } else if textField == typeName {
             textField.resignFirstResponder()
             descriptionField.becomeFirstResponder()
-        } else if textField == descriptionField {
-            textField.resignFirstResponder()
         }
         return true
     }
